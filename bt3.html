@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập số phần tử : ");
+  let arrayA = new Array(a);
+  let count = 0;
+  let max = 0;
+  let index = 0;
+  for (let i = 0; i < a; i++) {
+    arrayA[i] = Math.floor(Math.random()*20);
+  }
+  for (let i = 0; i < arrayA.length; i++) {
+    if (max < arrayA[i]){
+      max = arrayA[i];
+    }
+    index = index + arrayA[i];
+  }
+  alert("Giá trị lớn nhất trong mảng là : "+max+" và Giá trị trung bình của mảng : "+index/a);
+</script>
+</body>
+</html>

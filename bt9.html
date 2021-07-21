@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</title>
+</head>
+<body>
+<div>
+  <p id="mang"></p>
+  <p id="mangsau"></p>
+  <p id="ketqua"></p>
+</div>
+<script>
+  let a = +prompt("Nhập số phần tử : ");
+  let arrayA = new Array(a);
+  let arrayB = new Array(a);
+  let arrayC = new Array(2*a);
+  for (let i = 0; i < a; i++) {
+    arrayA[i] = Math.floor(Math.random()*20);
+    arrayB[i] = Math.floor(Math.random()*20);
+  }
+  document.getElementById("mang").innerHTML = "Mảng 1 : " + arrayA;
+  document.getElementById("mangsau").innerHTML = "Mảng 2 : " + arrayB;
+  arrayC = arrayB.concat(arrayA);
+  document.getElementById("ketqua").innerHTML = "Mảng 3 : " + arrayC;
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<div>
+  <p id="mang"></p>
+  <p id="mangsau"></p>
+</div>
+<script>
+  let a = +prompt("Nhập số phần tử : ");
+  let arrayA = new Array(a);
+  let index = [a];
+  for (let i = 0; i < a; i++) {
+    arrayA[i] = Math.floor(Math.random()*20);
+  }
+  document.getElementById("mang").innerHTML = arrayA;
+  for (let i = 0; i < arrayA.length; i++) {
+    index[i] = arrayA[a-i-1];
+  }
+
+  document.getElementById("mangsau").innerHTML ="Mảng đảo ngược : " + index;
+</script>
+</body>
+</html>

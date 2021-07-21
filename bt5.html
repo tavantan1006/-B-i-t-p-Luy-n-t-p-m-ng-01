@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+<div>
+  <p id="mang"></p>
+  <p id="mangsau"></p>
+</div>
+<script>
+  let a = +prompt("Nhập số phần tử : ");
+  let count = 0;
+  let arrayA = new Array(a);
+  for (let i = 0; i < a; i++) {
+    arrayA[i] = Math.floor(Math.random()*20) - Math.floor(Math.random()*20);
+  }
+  document.getElementById("mang").innerHTML = arrayA;
+  for (let i = 0; i < arrayA.length; i++) {
+    if (arrayA[i] < 0){
+      count++;
+    }
+  }
+  document.getElementById("mangsau").innerHTML ="Số phần tử âm trong mảng là : " + count;
+</script>
+</body>
+</html>
